@@ -1,6 +1,6 @@
 Summary: AtomicParsley video tool
-Name: openrepos-atomicparsley
-Version: 20210124
+Name: AtomicParsley
+Version: 20210715
 Release: 1
 License: GPL
 Group: Applications/Multimedia
@@ -10,15 +10,17 @@ Description:
     lightweight command line program for reading, parsing and setting metadata into MPEG-4 files
 
 Sources:
-    - https://github.com/wez/atomicparsley/archive/20210114.184825.1dbe1be.tar.gz
+    # https://github.com/wez/atomicparsley/archive/20210114.184825.1dbe1be.tar.gz
+    - '%{name}-%{version}.tar.gz'
 # its really cmake, make and then manually install
 # make install does not work, so no Builder
-Patches:
-  - atomicparsley-cmake-3.11.patch
+#Patches:
+#  - atomicparsley-cmake-3.11.patch
+SetupOptions: '-q -n %{name}-%{version}/upstream'
 Configure: none
 Builder: none
 PkgBR:
     - cmake
     - automake
 Files:
-    - '%{_bindir}/AtomicParsley'
+    - '%{_bindir}/%{name}'
