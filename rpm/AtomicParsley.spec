@@ -9,7 +9,7 @@ Name:       AtomicParsley
 # << macros
 
 Summary:    MP4 video metadata tool
-Version:    20210715
+Version:    0.9.6.20210715
 Release:    1
 Group:      Applications/Multimedia
 License:    GPLv2
@@ -46,7 +46,7 @@ rm -rf %{buildroot}
 # << install pre
 
 # >> install post
-%{__install} -D -p -m 755 AtomicParsley $RPM_BUILD_ROOT/%{_bindir}/AtomicParsley
+%{__install} -D -p -m 755 AtomicParsley %{buildroot}%{_bindir}/AtomicParsley
 # << install post
 
 %files
