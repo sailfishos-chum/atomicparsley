@@ -1,0 +1,10 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 136ed42..72e63bd 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -100,4 +100,4 @@ if (ASAN)
+   set (CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+ endif()
+ 
+-install(TARGETS AtomicParsley RUNTIME)
++install(TARGETS AtomicParsley RUNTIME DESTINATION bin)

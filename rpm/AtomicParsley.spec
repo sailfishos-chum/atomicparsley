@@ -16,6 +16,10 @@ License:    GPLv2
 URL:        http://github.com/wez/atomicparsley
 Source0:    %{name}-%{version}.tar.gz
 Source100:  AtomicParsley.yaml
+Patch0:     atomicparsley-cmake-3.11.patch
+Patch1:     atomicparsley-cmake-runtime-destination.patch
+Patch2:     atomicparsley-cmake-cxx11.patch
+BuildRequires:  pkgconfig(zlib)
 BuildRequires:  cmake
 BuildRequires:  automake
 
@@ -25,6 +29,12 @@ lightweight command line program for reading, parsing and setting metadata into 
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
+# atomicparsley-cmake-3.11.patch
+%patch0 -p1
+# atomicparsley-cmake-runtime-destination.patch
+%patch1 -p1
+# atomicparsley-cmake-cxx11.patch
+%patch2 -p1
 # >> setup
 # << setup
 

@@ -13,13 +13,23 @@ Description:
 Sources:
     # https://github.com/wez/atomicparsley/archive/20210114.184825.1dbe1be.tar.gz
     - '%{name}-%{version}.tar.gz'
-# its really cmake, make and then manually install
-# make install does not work, so no Builder
-#Patches:
-#  - atomicparsley-cmake-3.11.patch
+# these could be applied conditionally thusly:
+#   < 4.1: need to lower CMake version
+#   if CMake == 3.11, must give runtime destination
+#   <= 3.1 must specify CXX standard because of older gcc
+# BUT, conditional patching produces SRCRPMs that are not valid for all build environments,
+# so we patch for all build for now
+Patches:
+  - atomicparsley-cmake-3.11.patch
+  - atomicparsley-cmake-runtime-destination.patch
+  - atomicparsley-cmake-cxx11.patch
 SetupOptions: '-q -n %{name}-%{version}/upstream'
 Configure: none
+# its really cmake, make and then manually install
+# make install does not work, so no Builder
 Builder: none
+PkgConfigBR:
+  - zlib
 PkgBR:
     - cmake
     - automake
