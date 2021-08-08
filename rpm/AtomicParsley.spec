@@ -8,11 +8,11 @@ Name:       AtomicParsley
 # >> macros
 # << macros
 
-Summary:    AtomicParsley video tool
+Summary:    MP4 video metadata tool
 Version:    20210715
 Release:    1
 Group:      Applications/Multimedia
-License:    GPL
+License:    GPLv2
 URL:        http://github.com/wez/atomicparsley
 Source0:    %{name}-%{version}.tar.gz
 Source100:  AtomicParsley.yaml

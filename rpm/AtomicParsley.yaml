@@ -1,13 +1,14 @@
-Summary: AtomicParsley video tool
+Summary: MP4 video metadata tool
 Name: AtomicParsley
 Version: 20210715
 Release: 1
-License: GPL
+License: GPLv2
 Group: Applications/Multimedia
 URL: http://github.com/wez/atomicparsley
 SCM: git://github.com/wez/atomicparsley
 Description:
-    lightweight command line program for reading, parsing and setting metadata into MPEG-4 files
+    lightweight command line program for reading, parsing and setting metadata
+    into MPEG-4 files
 
 Sources:
     # https://github.com/wez/atomicparsley/archive/20210114.184825.1dbe1be.tar.gz
