@@ -6,9 +6,21 @@ License: GPLv2
 Group: Applications/Multimedia
 URL: http://github.com/wez/atomicparsley
 SCM: git://github.com/wez/atomicparsley
-Description:
+Description: |
     lightweight command line program for reading, parsing and setting metadata
     into MPEG-4 files
+
+    %if "%{?vendor}" == "chum"
+    PackageName: AtomicParsley
+    Type: console-application
+    PackagerName: nephros
+    Categories:
+     - Media
+     - Video
+    Custom:
+      PackagingRepo: https://gitlab.com/nephros/openrepos-atomicparsley
+      Repo: https://github.com/wez/atomicparsley
+    %endif
 
 Sources:
     # https://github.com/wez/atomicparsley/archive/20210114.184825.1dbe1be.tar.gz

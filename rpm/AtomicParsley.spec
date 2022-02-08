@@ -26,7 +26,21 @@ Obsoletes:   openrepos-atomicparsley <= 20210114
 Obsoletes:   openrepos-atomicparsley <= 0.9.6-1
 
 %description
-lightweight command line program for reading, parsing and setting metadata into MPEG-4 files
+lightweight command line program for reading, parsing and setting metadata
+into MPEG-4 files
+
+%if "%{?vendor}" == "chum"
+PackageName: AtomicParsley
+Type: console-application
+PackagerName: nephros
+Categories:
+ - Media
+ - Video
+Custom:
+  PackagingRepo: https://gitlab.com/nephros/openrepos-atomicparsley
+  Repo: https://github.com/wez/atomicparsley
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
