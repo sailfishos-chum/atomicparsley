@@ -22,6 +22,8 @@ Patch2:     atomicparsley-cmake-cxx11.patch
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  cmake
 BuildRequires:  automake
+Obsoletes:   openrepos-atomicparsley <= 20210114
+Obsoletes:   openrepos-atomicparsley <= 0.9.6-1
 
 %description
 lightweight command line program for reading, parsing and setting metadata into MPEG-4 files

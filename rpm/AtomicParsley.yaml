@@ -33,5 +33,8 @@ PkgConfigBR:
 PkgBR:
     - cmake
     - automake
+Obsoletes:
+    - openrepos-atomicparsley <= 20210114
+    - openrepos-atomicparsley <= 0.9.6-1
 Files:
     - '%{_bindir}/%{name}'
