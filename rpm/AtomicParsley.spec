@@ -37,7 +37,7 @@ Categories:
  - Media
  - Video
 Custom:
-  PackagingRepo: https://gitlab.com/nephros/openrepos-atomicparsley
+  PackagingRepo: https://github.com/sailfishos-chum/atomicparsley
   Repo: https://github.com/wez/atomicparsley
 %endif
 
