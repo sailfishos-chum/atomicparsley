@@ -1,0 +1,19 @@
+* Thu Feb  4 2021 Nephros <sailfish@nephros.org> 20210114
+- upstream bump
+- remove empty -devel package
+- changes see https://github.com/wez/atomicparsley/releases/tag/20210114.184825.1dbe1be
+
+* Wed Dec 30 2020 Nephros <sailfish@nephros.org> 20200701
+- add other archs
+- new version, switch upstream to code from wez
+
+* Sat Sep 26 2020 Nephros <sailfish@nephros.org> 0.9.6-2
+- new version, switch upstream to code from wez
+- move to yaml+spec build
+
+* Tue Jul 14 2020 Nephros <sailfish@nephros.org> 0.9.0-2
+- rename binary so youtube-dl can find it
+
+* Tue Jul 14 2020 Nephros <sailfish@nephros.org> 0.9.0
+- Package for SailfishOS
+
